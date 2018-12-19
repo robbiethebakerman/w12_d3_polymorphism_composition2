@@ -1,0 +1,45 @@
+# Polymorphism & Composition Homework - Quiz
+
+# Polymorphism
+
+1. What does the ___word___ 'polymorphism' mean?
+
+Polymorphism means the ability of the same object to be viewed or treated as different types of object. E.g., a person can be a human, an uncle, a partner or a student, or a person that runs, or a person that plays guitar - all of these describe the same person, in different ways.
+
+2. What does it mean when we apply polymorphism to OO design? Give a simple Java example.
+
+In OO design, it means an object can behave as different types, other than the class it was initialised as. For example in Java a hybridCar object could be both an instance of a HybridCar class, and an instance of the parent class of HybridCar, namely Car. (IS-A relationship)
+
+3. What can we use to implement polymorphism in Java?
+
+We can use inheritance, so an object can behave as an object of any class further up the inheritance chain (parent class, grandparent class etc). We can also use interfaces, so an object can behave as an object implementing a particular interface, if the object's class or any class further up the inheritance chain implements that interface.
+
+4. How many 'forms' can an object take when using polymorphism?
+
+There is no limit to the number of forms an object can take, because (i) an inheritance chain can go up any arbitrary number of levels; (ii) a class can implement any arbitrary number of interfaces.
+
+5. Give an example of when you could use polymorphism.
+
+You would use polymorphism when modelling complex systems, like an airport or a shop. You would use it any time you have a variety of different kinds of objects with overlapping properties, but also unique properties, so you can model what they have in common with parent classes or interfaces, and model where they differ with individual child classes.
+
+
+
+# Composition
+
+6. What do we mean by 'composition' in reference to object-oriented programming?
+
+Composition means when objects can contain other objects, as properties. E.g., a human can contain a brain, a heart, and a liver. (HAS-A relationship)
+
+NB - When objects contain an array of other objects as a property, that is usually aggregation rather than composition (a looser association, where the component objects are not owned by the aggregate object).
+
+7. When would you use composition? Provide a simple example in Java.
+
+You would use composition when you have a complex object that can be broken down into smaller parts which are themselves objects. For example, a class for House could have properties for Bedroom, Kitchen, Bathroom - each of these a different class of object.
+
+8. What is/are the advantage(s) of using composition?
+
+It makes programs flexible. You can change either individual component classes or the composite class without having to change the other. It also allows you to separate code out - achieving a high level of abstraction. (Instead of a car having functions for everything all its component parts do, many of these functions could be carried out by the component parts.) Sometimes it makes no sense to use inheritance because not everything can be modelled as a hierarchical tree where everything has some behaviour or property in common - sometimes there are a lot of disparate objects, and composition is more appropriate to bring them together.
+
+9. What happens to the behaviours when the object composed of them is destroyed?
+
+The behaviours are destroyed when the object is destroyed.
